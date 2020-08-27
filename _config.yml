@@ -93,11 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Takhyun Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "공부합시다."
   location         : "Somewhere"
-  email            :
+  email            : kimkih1218@naver.com / kimkih1218@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
