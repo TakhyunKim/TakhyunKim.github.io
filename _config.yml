@@ -97,8 +97,8 @@ author:
   name             : "Takhyun Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "공부합시다."
-  location         : "Somewhere"
-  email            : kimkih1218@naver.com / kimkih1218@gmail.com
+  location         : "서울특별시 구로구 개봉동"
+  email            : kimkih1218@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
