@@ -3,10 +3,11 @@ title: "농구 게임_jquery에 대한 내용"
 date: 2020-08-28 00:06:30 -0400
 categories: 프로젝트 가이드
 ---
+# 농구 게임_jquery
+  
+  * jQuery 
 
-# jQuery
-
- * 복사할 <script> 태그를 보면서 흔히 보기 힘든 'integrity', 'crossrigin' 속성이 포함되어 있습니다.
+   - 복사할 <script> 태그를 보면서 흔히 보기 힘든 'integrity', 'crossrigin' 속성이 포함되어 있습니다.
    이는 'Subresource intergrity checking' 이라는 일종의 보안 장치로서, 'src'에 명시된 스크립트 파일이 원본 파일이 맞는지를 검사해 주는 역할을 합니다.
    브라우저는 요청된 스크립트 파일을 불러온 후 파일 내용 전체에 대해 해시값을 생성한 후, intergrity 속성의 값과 일치하는지를 확인합니다.
    만약 다르다면 중간에 누군가 파일 내용을 변조했을 위험이 있으므로 실행하지 않고 무시해 버리게 됩니다.
