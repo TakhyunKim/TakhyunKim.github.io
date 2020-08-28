@@ -1,0 +1,37 @@
+# 패스트 푸드점 찾기(프로젝트 가이드)
+
+* API에 검색 관련 인자 전달하기
+
+  $('.btn_search').click(function() {
+    var searchKeyword = $('#txt_search').val();
+    
+    $.get(API_URL, {
+    searchKeyword : searchKeyword
+    }, function(data){
+      ...
+    });
+  });
+  
+ 위 코드를 보게 되면, 먼저 id가 'txt_search'인 입력창에서 값을 받아 'searchKeyword'라는 변수에 넣어주고 있습니다.
+ 'val()'함수는 input태그, textarea태그 등에서 현재 입력되어 있는 값을 가져올 때 사용합니다. 따라서, 입력창에
+ '판교'라고 입력하였다면 searchKeyword에 '판교'라는 문자열이 들어가게 됩니다.
+ 
+ 그 다음엔 $.get() 함수에서 두 번째 인자에 'searchKeyword'라는 키에 대한 값으로 '변수 searchKeyword'를 넣어 줍니다.
+ 이렇게 인자값을 넣어 주면 $.get()은 인자로 넘어온 오브젝트를 쿼리 스트링으로 변환하여 API를 호출하게 됩니다.
+ 
+* 쿼리 스트링이란??
+
+  주소창의 URL을 보면 https://www.google.co.kr/search?q=판교&oq=판교&aqs=chrome
+  주소 중 물음표를 기준으로 좌측으로는 경로라고 부르고, 우측 부분은 쿼리 스트링이라고 부릅니다.
+  쿼리 스트링은 원하는 인자들을 서버로 넘기기 위해 존재하고, 'key=value'식의 매우 단순한 구조로 만들어져있어 쉽게 이해 할 수있습니다.
+  예로 든 URL에선 q키의 값은 '판교' oq라는 키의 값도 '판교' aqs키의 값은 'chrome'인 것을 알수 있습니다.
+  이렇게 인자가 여러 가지일 경우 & 기호로 연결해주면 됩니다.
+  
+* 인자의 순서
+
+  자바스크립트에서는 인자를 넣지 않고 호출했을 시에 마치 인자에 'undefined'를 넣은 것처럼 동작하기 때문에 '생략할 수 있는 선택적인 인자들을 우측에' 넣는 경향이 있습니다.
+  
+  이 경우, page와 searchKeyword를 비교하였을 때 page에 비해 searchKeyword가 생략될 경우가 더 많다고 판단되었기 때문에 page를
+  searchKeyword 왼쪽에 배치하게 된 것입니다.
+  
+  결론적으로 API를 설계할 경우 가장 필수 인자부터 순서대로 왼쪽으로부터 배치하는 것이 좋습니니다!
