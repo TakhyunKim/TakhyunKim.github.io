@@ -7,8 +7,9 @@ categories: Javascript
 ===
 this에 별도의 대상을 바인딩하는 방법 2가지에 대해 작성하였습니다.
 
-1. call 메서드
+call 메서드
 ---
+
 ``` javascript
 Function.prototype.call(thisArg[,arg1[,arg2[,...]]])
 ```
@@ -37,8 +38,9 @@ obj.method(2, 3);
 obj.method.call({a: 4}, 5, 6); // 4 5 6 
 ```
 
-2. apply 메서드
+apply 메서드
 ---
+
 ``` javascript
 Function.prototype.apply(thisArg[, argsArray])
 ```
