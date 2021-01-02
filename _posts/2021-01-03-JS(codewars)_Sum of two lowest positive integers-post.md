@@ -17,7 +17,7 @@ code
 function sumTwoSmallestNumbers(numbers) {  
   const newArr = numbers.sort((a, b) => {return a - b});
   
-  return +`${newArr[0] + newArr[1]}`;
+  return newArr[0] + newArr[1];
 }
 ```
 
@@ -28,4 +28,4 @@ function sumTwoSmallestNumbers(numbers) {
 풀이 과정
 ---
 sort로 오름차순 정렬을 통해서 첫번째, 두번째 인덱스를 더했으며 <br>
-더하는 과정은 변수 선언으로 따로 계산하기 보다 템플릿 리터럴을 활용하여 문제를 해결하였다.<br>
+첫 번째 두 번째 인덱스를 더해 문제 해결
